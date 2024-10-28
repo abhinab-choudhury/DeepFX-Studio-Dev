@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Documentation</title>
+  <link rel="stylesheet" href="{% static 'api/css/styles.css' %}">
+</head>
+<body>
+  <div class="header">
+    <h1 class="title">Django API Documentation</h1>
+    <p class="intro">Explore the API documentation, endpoints, and usage instructions.</p>
+  </div>
+
+  <div class="content">
+    <section class="documentation-tools">
+      <h2>Documentation Tools</h2>
+      <p>Our API is documented using <strong>Swagger</strong> for interactive documentation, allowing you to test endpoints directly within the browser. Additional tools like Postman and ReDoc provide alternative views and testing capabilities.</p>
+      <ul class="tools-list">
+        <li><a href="https://swagger.io/" target="_blank">Swagger UI</a></li>
+        <li><a href="https://redocly.com/" target="_blank">ReDoc</a></li>
+        <li><a href="https://www.postman.com/" target="_blank">Postman Collection</a></li>
+      </ul>
+    </section>
+
+    <section class="getting-started">
+      <h2>Getting Started</h2>
+      <p>This API provides a range of endpoints to interact with. Below are the steps to authenticate and test endpoints. For more details on each endpoint, refer to the Swagger or ReDoc links above.</p>
+    </section>
+  </div>
+</body>
+</html>

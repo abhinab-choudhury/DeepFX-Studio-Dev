@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+.header {
+  padding: 2rem;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  font-size: 1.6rem;
+  font-weight: lighter;
+}
+
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.documentation-tools h2,
+.getting-started h2 {
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.documentation-tools p,
+.getting-started p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.tools-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tools-list li {
+  margin: 0.5rem 0;
+}
+
+.tools-list a {
+  text-decoration: none;
+  color: #007acc;
+}
+
+.tools-list a:hover {
+  color: #005a99;
+}

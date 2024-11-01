@@ -14,7 +14,8 @@
 - [ ] Provide Figma markup to the team for front-end development.
 - [ ] Explore using the **GSAP** library for animations [use CDN](https://gsap.com/docs/v3/Installation/?tab=cdn&module=esm&method=private+registry&tier=free&club=false&require=false&trial=true) ([Tutorial](https://www.youtube.com/watch?v=9C03V1dXxOU&list=PLbtI3_MArDOnIIJxB6xFtpnhM0wTwz0x6)).
 - [ ] Research a solution to remove `.html` from page URLs for cleaner routing, similar to an SPA (Single Page Application).
-
+- [ ] Create Policy Page http://localhost:8000/privacy/
+- [ ] Create Service Page http://localhost:8000/privacy/
 
 
 ## Overview:

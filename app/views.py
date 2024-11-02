@@ -22,9 +22,41 @@ def privacy_view(request):
     return render(request, 'app/privacy.html')
 
 
-@login_required
 def terms_view(request):
     return render(request, 'app/terms-and-conditions.html')
+
+
+@login_required
+def dashboard_view(request):
+    return render(request, 'app/dashboard.html')
+
+
+def signup(request):
+    if request.method == "POST":
+        username = request.POST["username"]
+        email = request.POST["email"]
+
+        # Ensure password matches with confirmation
+        password = request.POST["password"]
+        repeat_password = request.POST["confirm-password"]
+
+        if password != repeat_password:
+            messages.error(request, "Passwords do not match")
+            return redirect('app:signup')
+        else:
+            pass
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.set_password(form.cleaned_data["password"])
+            user.save()
+            login(request, user)
+
+            redirect('app:terms-and-conditions_view')
+    else:
+        form = UserRegistrationForm()
+
+    return render(request, 'app/signup.html')
 
 
 def signin(request):
@@ -47,33 +79,3 @@ def signin(request):
 def signout(request):
     signout(request)
     return redirect('app:index_view')
-
-
-def signup(request):
-    if request.method == "POST":
-        username = request.POST["username"]
-        email = request.POST["email"]
-        first_name = request.POST["first_name"]
-        last_name = request.POST["last_name"]
-
-        # Ensure password matches with confirmation
-        password = request.POST["password"]
-        repeat_password = request.POST["repeat_password"]
-
-        if password != repeat_password:
-            messages.error(request, "Passwords do not match")
-            return redirect('app:signup')
-        else:
-            pass
-        form = UserRegistrationForm(request.POST)
-        if form.is_valid():
-            user = form.save(commit=False)
-            user.set_password(form.cleaned_data["password"])
-            user.save()
-            login(request, user)
-
-            redirect('app:terms-and-conditions_view')
-    else:
-        form = UserRegistrationForm()
-
-    return render(request, 'app/signup.html')
